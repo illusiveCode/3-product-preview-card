@@ -1,0 +1,112 @@
+:root {
+  /* Primary Colors */
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+
+  /* Neutral Colors */
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background-color: var(--primary-cream);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 35em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 1rem;
+  overflow: hidden;
+  height: auto;
+  background-color: var(--neutral-white);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.label,
+.description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  color: var(--neutral-very-dark-blue);
+}
+
+.label {
+  letter-spacing: 4px;
+}
+
+.description {
+  line-height: 1.3rem;
+}
+
+.card-heading {
+  font-family: "Fraunces", sans-serif;
+  line-height: 2rem;
+  font-size: 2rem;
+  color: var(--neutral-very-dark-blue);
+}
+
+.main-price {
+  font-size: 2rem;
+  font-family: "Fraunces", sans-serif;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: var(--primary-dark-cyan);
+  .previous-price {
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    color: var(--neutral-very-dark-blue);
+  }
+}
+
+button {
+  background-color: var(--primary-dark-cyan);
+  border: none;
+  border-radius: 6px;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: var(--neutral-white);
+
+  img {
+    margin-right: 0.8rem;
+  }
+}
