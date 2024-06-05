@@ -1,6 +1,6 @@
 :root {
   /* Primary Colors */
-  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-dark-cyan: hsl(158 36% 37%);
   --primary-cream: hsl(30, 38%, 92%);
 
   /* Neutral Colors */
@@ -44,7 +44,7 @@ body {
   max-width: 35em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border-radius: 1rem;
+  border-radius: 0.7rem;
   overflow: hidden;
   height: auto;
   background-color: var(--neutral-white);
@@ -60,8 +60,8 @@ article {
 .label,
 .description {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.8rem;
-  color: var(--neutral-very-dark-blue);
+  font-size: 0.9rem;
+  color: var(--neutral-dark-grayish-blue);
 }
 
 .label {
@@ -91,7 +91,7 @@ article {
     font-size: 0.8rem;
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
-    color: var(--neutral-very-dark-blue);
+    color: var(--neutral-dark-grayish-blue);
   }
 }
 
@@ -105,8 +105,43 @@ button {
   align-items: center;
   font-weight: 700;
   color: var(--neutral-white);
+  &:active {
+    background-color: hsl(158 36% 25%);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 
   img {
-    margin-right: 0.8rem;
+    margin-right: 0.7rem;
+  }
+}
+
+/* ====================
+=====MEDIA QUERIES=====
+=======================*/
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+    height: 100%;
+    margin: 1rem;
+    max-height: 750px;
+
+    div img {
+      max-height: 270px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  article {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
   }
 }
