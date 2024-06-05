@@ -91,6 +91,7 @@ article {
     font-size: 0.8rem;
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
+    text-decoration: line-through;
     color: var(--neutral-dark-grayish-blue);
   }
 }
