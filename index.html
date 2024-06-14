@@ -45,10 +45,27 @@
           </p>
         </div>
 
-        <button class="" type="submit">
-          <img src="/images/icon-cart.svg" alt="" />Add to Cart
+        <button id="cartButton" type="submit">
+          <img id="cartImage" src="/images/icon-cart.svg" alt="" />Add to Cart
         </button>
       </article>
     </main>
+    <script>
+      const cartButton = document.getElementById("cartButton");
+      const cartImage = document.getElementById("cartImage");
+
+      const originalText = cartButton.innerHTML;
+      const originalCartImage = cartImage.src;
+
+      cartButton.addEventListener("click", () => {
+        cartButton.innerHTML =
+          '<img id="cartImage" src="/images/icon-added.svg" alt="" /> ✅Added';
+
+        setTimeout(() => {
+          cartButton.innerHTML = originalText;
+          cartImage.src = originalCartImage;
+        }, 3000);
+      });
+    </script>
   </body>
 </html>
